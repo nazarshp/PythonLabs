@@ -12,7 +12,7 @@ class LinkedList:
         self.head = None
         self.tail = None
 
-    def addToEnd(self, type, mark, limit, year):
+    def addToEnd(self, type, mark, limit, year):#_aaa
         newbox = Node(type, mark, limit, year)
         if self.head is None:
             self.head = newbox
@@ -31,15 +31,6 @@ class LinkedList:
             newNode.previous = self.tail;
             self.tail = newNode;
             self.tail.next = None;
-
-    def contains(self, type, mark, limit, year):
-        lastbox = self.head
-        while (lastbox):
-            if type == lastbox.type and mark == lastbox.type and limit == lastbox.limit and year == lastbox.year:
-                return True
-            else:
-                lastbox = lastbox.nextnode
-        return False
 
     def insert_after_item(self, xyear, type, mark, limit, year):
         n = self.head

@@ -1,7 +1,7 @@
 from abc import ABC
 
 
-class Devices(ABC):
+class Devices(ABC):#device
     def __init__(self, name: str, price: int, serial_number: str) -> None:
         self.name = name
         self.price = price
